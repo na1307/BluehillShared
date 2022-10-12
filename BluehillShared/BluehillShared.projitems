@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>924f3c61-e147-416f-b112-a070a8a04a82</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BluehillShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AssemblyProperties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CompilerFeatureRequiredAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExtensionAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IsExternalInit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequiredMemberAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SetsRequiredMembersAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WindowsVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Winver.cs" />
+  </ItemGroup>
+</Project>
