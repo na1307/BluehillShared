@@ -1,4 +1,5 @@
 ﻿#if NETFRAMEWORK && !NET35_OR_GREATER
+#nullable enable
 using System;
 
 namespace System.Runtime.CompilerServices;

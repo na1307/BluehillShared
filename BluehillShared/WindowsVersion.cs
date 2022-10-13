@@ -1,4 +1,5 @@
-﻿namespace BluehillShared;
+﻿#nullable enable
+namespace BluehillShared;
 
 public enum WindowsVersion {
     Unknown,

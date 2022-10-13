@@ -1,4 +1,5 @@
-﻿using static BluehillShared.WindowsVersion;
+﻿#nullable enable
+using static BluehillShared.WindowsVersion;
 using static System.Environment;
 
 namespace BluehillShared;
