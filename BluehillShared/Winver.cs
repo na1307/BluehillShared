@@ -43,7 +43,12 @@ public static class Winver {
     /// <summary>
     /// 현재 윈도우 서비스 팩 버전
     /// </summary>
-    public static string WindowsServicePack => OSVersion.Version.Major != 4 || OSVersion.Version.Minor != 10 || OSVersion.Version.Build != 2222 ? OSVersion.ServicePack : "Second Edition";
+    public static string WindowsServicePack {
+        get {
+            var servicePack = string.IsNullOrEmpty(OSVersion.ServicePack) ? "Service Pack 0" : OSVersion.ServicePack;
+            return OSVersion.Version.Major != 4 || OSVersion.Version.Minor != 10 || OSVersion.Version.Build != 2222 ? servicePack : "Second Edition";
+        }
+    }
 
     /// <summary>
     /// 윈도우 서버인지 여부
