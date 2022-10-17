@@ -13,9 +13,4 @@
     <Compile Include="$(MSBuildThisFileDirectory)FormAbout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FormDialog.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)FormAbout.resx">
-      <DependentUpon>FormAbout.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
 </Project>

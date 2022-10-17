@@ -1,5 +1,6 @@
 ﻿#nullable disable
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using static BluehillShared.AssemblyProperties;
@@ -9,7 +10,7 @@ namespace BluehillShared;
 /// <summary>
 /// 정보 상자 폼
 /// </summary>
-public sealed class FormAbout : Form {
+public class FormAbout : Form {
     private readonly TableLayoutPanel tableLayoutPanel = new();
     private readonly PictureBox logoPictureBox = new();
     private readonly Label labelProductName = new();
@@ -19,9 +20,11 @@ public sealed class FormAbout : Form {
     private readonly TextBox textBoxDescription = new();
     private readonly Button okButton = new();
 
-    public FormAbout() {
+    public FormAbout() : this(null) { }
+
+    public FormAbout(Image image) {
         tableLayoutPanel.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
+        ((ISupportInitialize)logoPictureBox).BeginInit();
         SuspendLayout();
         tableLayoutPanel.ColumnCount = 2;
         tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33F));
@@ -47,7 +50,7 @@ public sealed class FormAbout : Form {
         tableLayoutPanel.Size = new(487, 245);
         tableLayoutPanel.TabIndex = 0;
         logoPictureBox.Dock = DockStyle.Fill;
-        logoPictureBox.Image = (Image)new System.ComponentModel.ComponentResourceManager(typeof(FormAbout)).GetObject("logoPictureBox.Image");
+        logoPictureBox.Image = image;
         logoPictureBox.Location = new(4, 3);
         logoPictureBox.Margin = new(4, 3, 4, 3);
         logoPictureBox.Name = "logoPictureBox";
@@ -114,7 +117,7 @@ public sealed class FormAbout : Form {
         okButton.Click += okButton_Click;
         AcceptButton = okButton;
         AutoScaleDimensions = new(7F, 12F);
-        AutoScaleMode = AutoScaleMode.Font;
+        AutoScaleMode = AutoScaleMode.None;
         ClientSize = new(507, 261);
         Controls.Add(tableLayoutPanel);
         FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -129,14 +132,17 @@ public sealed class FormAbout : Form {
         Text = "FormAbout";
         tableLayoutPanel.ResumeLayout(false);
         tableLayoutPanel.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)logoPictureBox).EndInit();
+        ((ISupportInitialize)logoPictureBox).EndInit();
         ResumeLayout(false);
-        Text = $"{AssemblyTitle} 정보";
-        labelProductName.Text = AssemblyProduct;
-        labelVersion.Text = $"버전 {AssemblyInformationalVersion}";
-        labelCopyright.Text = AssemblyCopyright;
-        labelCompanyName.Text = AssemblyCompany;
-        textBoxDescription.Text = AssemblyDescription;
+
+        if (LicenseManager.UsageMode != LicenseUsageMode.Designtime) {
+            Text = $"{AssemblyTitle} 정보";
+            labelProductName.Text = AssemblyProduct;
+            labelVersion.Text = $"버전 {AssemblyInformationalVersion}";
+            labelCopyright.Text = AssemblyCopyright;
+            labelCompanyName.Text = AssemblyCompany;
+            textBoxDescription.Text = AssemblyDescription;
+        }
     }
 
     private void okButton_Click(object sender, EventArgs e) => Close();
