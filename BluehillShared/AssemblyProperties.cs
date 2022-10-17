@@ -10,7 +10,7 @@ public static class AssemblyProperties {
         get {
             var attribute = GetAttribute<AssemblyTitleAttribute>();
 
-            return attribute != null && !string.IsNullOrEmpty(attribute.Title) ? attribute.Title : Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()!.CodeBase)!;
+            return attribute != null && !string.IsNullOrEmpty(attribute.Title) ? attribute.Title : Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()!.Location)!;
         }
     }
 

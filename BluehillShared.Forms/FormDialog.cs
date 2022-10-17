@@ -68,7 +68,14 @@ public class FormDialog : Form {
 
     protected sealed override void OnSizeChanged(EventArgs e) {
         base.OnSizeChanged(e);
-        TableLayoutPanel1.Location = new(Size.Width - 190, Size.Height - 70);
+        const int s =
+#if NET45_OR_GREATER || !NETFRAMEWORK
+    10
+#else
+    0
+#endif
+    ;
+        TableLayoutPanel1.Location = new(Size.Width - 190 - s, Size.Height - 70 - s);
     }
 
     protected virtual void OK_Button_Click(object sender, EventArgs e) {
