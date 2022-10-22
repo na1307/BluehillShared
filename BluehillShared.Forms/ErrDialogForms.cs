@@ -1,7 +1,4 @@
-﻿#nullable enable
-using System.Windows.Forms;
-
-namespace BluehillShared;
+﻿namespace BluehillShared;
 
 public static class ErrDialogForms {
     public static void ErrMsg(string message, bool exit) {

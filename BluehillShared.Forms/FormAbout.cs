@@ -1,8 +1,5 @@
 ﻿#nullable disable
-using System;
 using System.ComponentModel;
-using System.Drawing;
-using System.Windows.Forms;
 using static BluehillShared.AssemblyProperties;
 
 namespace BluehillShared;

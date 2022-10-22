@@ -1,5 +1,4 @@
-﻿#nullable enable
-namespace BluehillShared;
+﻿namespace BluehillShared;
 
 /// <summary>
 /// 확장 메서드 모음

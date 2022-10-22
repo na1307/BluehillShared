@@ -1,7 +1,4 @@
-﻿#nullable enable
-using System.Windows;
-
-namespace BluehillShared;
+﻿namespace BluehillShared;
 
 public static class ErrDialogWpf {
     public static void ErrMsg(string message, bool exit) {
