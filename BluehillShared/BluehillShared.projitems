@@ -9,25 +9,25 @@
     <Import_RootNamespace>BluehillShared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)AllowNullAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyProperties.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CompilerFeatureRequiredAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DisallowNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DoesNotReturnAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DoesNotReturnIfAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ExcludeFromCodeCoverageAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ExtensionAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IsExternalInit.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MaybeNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MaybeNullWhenAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MemberNotNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MemberNotNullWhenAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)NotNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)NotNullIfNotNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)NotNullWhenAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)RequiredMemberAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SetsRequiredMembersAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\CompilerFeatureRequiredAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\ExcludeFromCodeCoverageAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\ExtensionAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\IsExternalInit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\AllowNullAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\DisallowNullAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\DoesNotReturnAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\DoesNotReturnIfAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MaybeNullAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MaybeNullWhenAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MemberNotNullAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MemberNotNullWhenAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\NotNullAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\NotNullIfNotNullAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\NotNullWhenAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\RequiredMemberAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Features\SetsRequiredMembersAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SinglecastDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WindowsVersion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Winver.cs" />

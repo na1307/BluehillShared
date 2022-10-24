@@ -7,7 +7,7 @@ namespace BluehillShared;
 /// <summary>
 /// 정보 상자 폼
 /// </summary>
-public class FormAbout : Form {
+public sealed class FormAbout : Form {
     private readonly TableLayoutPanel tableLayoutPanel = new();
     private readonly PictureBox logoPictureBox = new();
     private readonly Label labelProductName = new();
@@ -111,7 +111,7 @@ public class FormAbout : Form {
         okButton.Size = new(88, 21);
         okButton.TabIndex = 24;
         okButton.Text = "확인(&O)";
-        okButton.Click += okButton_Click;
+        okButton.Click += (s, e) => Close();
         AcceptButton = okButton;
         AutoScaleDimensions = new(7F, 12F);
         AutoScaleMode = AutoScaleMode.None;
@@ -141,6 +141,4 @@ public class FormAbout : Form {
             textBoxDescription.Text = AssemblyDescription;
         }
     }
-
-    private void okButton_Click(object sender, EventArgs e) => Close();
 }

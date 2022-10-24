@@ -31,5 +31,5 @@ public sealed class SinglecastDelegate<T> : IEquatable<SinglecastDelegate<T>?> w
     public override bool Equals(object? obj) => Equals(obj as SinglecastDelegate<T>);
     public bool Equals(SinglecastDelegate<T>? other) => other is not null && realDelegate == other.realDelegate;
     [System.Diagnostics.CodeAnalysis.SuppressMessage(null, "S2328")]
-    public override int GetHashCode() => -1294918782 + EqualityComparer<T?>.Default.GetHashCode(realDelegate);
+    public override int GetHashCode() => -1294918782 + (realDelegate is not null ? realDelegate.GetHashCode() : 0);
 }
