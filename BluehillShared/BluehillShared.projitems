@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)NotNullWhenAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RequiredMemberAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SetsRequiredMembersAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SinglecastDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WindowsVersion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Winver.cs" />
   </ItemGroup>
