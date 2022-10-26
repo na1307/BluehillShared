@@ -15,17 +15,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Features\ExcludeFromCodeCoverageAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Features\ExtensionAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Features\IsExternalInit.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\AllowNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\DisallowNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\DoesNotReturnAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\DoesNotReturnIfAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MaybeNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MaybeNullWhenAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MemberNotNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\MemberNotNullWhenAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\NotNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\NotNullIfNotNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Features\NullableAttributes\NotNullWhenAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Features\RequiredMemberAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Features\SetsRequiredMembersAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SinglecastDelegate.cs" />
