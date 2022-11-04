@@ -20,6 +20,22 @@ public static class Extensions {
     /// <returns><paramref name="source"/>에서 <paramref name="length"/>만큼 자른 문자열</returns>
     public static string Right(this string source, int length) => source.Substring(source.Length - length);
 
+#if !NETFRAMEWORK || NET40_OR_GREATER
+    /// <summary>
+    /// 하나의 문자열로 합침
+    /// </summary>
+    /// <param name="strings"><see cref="IEnumerable{string}"/></param>
+    /// <returns>합쳐진 문자열</returns>
+    public static string ToJoinedString(this IEnumerable<string?> strings) => ToJoinedString(strings, null);
+
+    /// <summary>
+    /// 하나의 문자열로 합침
+    /// </summary>
+    /// <param name="strings"><see cref="IEnumerable{string}"/></param>
+    /// <param name="separator">구분자</param>
+    /// <returns>합쳐진 문자열</returns>
+    public static string ToJoinedString(this IEnumerable<string?> strings, string? separator) => string.Join(separator, strings);
+#endif
     /// <summary>
     /// WindowsVersion 값을 윈도우 이름으로 변환
     /// </summary>
