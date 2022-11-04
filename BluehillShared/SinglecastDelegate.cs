@@ -30,6 +30,6 @@ public sealed class SinglecastDelegate<T> : IEquatable<SinglecastDelegate<T>?> w
     public static bool Equals(SinglecastDelegate<T>? delegate1, SinglecastDelegate<T>? delegate2) => (object?)delegate1 == delegate2 || (delegate1 is not null && delegate2 is not null && delegate1.Equals(delegate2));
     public override bool Equals(object? obj) => Equals(obj as SinglecastDelegate<T>);
     public bool Equals(SinglecastDelegate<T>? other) => other is not null && realDelegate == other.realDelegate;
-    [System.Diagnostics.CodeAnalysis.SuppressMessage(null, "S2328")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("", "S2328")]
     public override int GetHashCode() => -1294918782 + (realDelegate is not null ? realDelegate.GetHashCode() : 0);
 }
