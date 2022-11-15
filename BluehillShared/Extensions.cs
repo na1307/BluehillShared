@@ -35,12 +35,10 @@ public static class Extensions {
     /// <param name="separator">구분자</param>
     /// <returns>합쳐진 문자열</returns>
     public static string ToJoinedString(this IEnumerable<string> strings, string separator) => string.Join(separator,
-#if NETFRAMEWORK && !NET40_OR_GREATER
-        new List<string>(
-#endif
+#if !NETFRAMEWORK || NET40_OR_GREATER
         strings
-#if NETFRAMEWORK && !NET40_OR_GREATER
-            ).ToArray()
+#else
+        new List<string>(strings).ToArray()
 #endif
         );
 #nullable restore
