@@ -6,9 +6,9 @@ namespace BluehillShared;
 /// </summary>
 // 추상 클래스로 표시하지 말것!
 public class FormDialog : Form {
-    protected TableLayoutPanel TableLayoutPanel1 = new();
-    protected Button OK_Button = new();
-    protected Button Cancel_Button = new();
+    protected readonly TableLayoutPanel TableLayoutPanel1 = new();
+    protected readonly Button OK_Button = new();
+    protected readonly Button Cancel_Button = new();
 
     protected FormDialog() {
         TableLayoutPanel1.SuspendLayout();
