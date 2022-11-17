@@ -1,4 +1,5 @@
-﻿using static BluehillShared.WindowsVersion;
+﻿using System.Runtime.InteropServices;
+using static BluehillShared.WindowsVersion;
 using static System.Environment;
 
 namespace BluehillShared;
@@ -54,6 +55,7 @@ public static class Winver {
     /// </summary>
     public static bool IsWindowsServer { get; } = IsOS(29);
 
-    [System.Runtime.InteropServices.DllImport("shlwapi.dll", EntryPoint = "#437", SetLastError = true)]
+    [DllImport("shlwapi.dll", EntryPoint = "#437", SetLastError = true)]
+    [return: MarshalAs(UnmanagedType.Bool)]
     private static extern bool IsOS(uint os);
 }
