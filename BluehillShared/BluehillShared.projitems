@@ -22,9 +22,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Features\RefSafetyRulesAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Features\RequiredMemberAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Features\SetsRequiredMembersAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ITwoWayEnumerable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ITwoWayEnumerator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SinglecastDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WindowsVersion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Winver.cs" />
   </ItemGroup>

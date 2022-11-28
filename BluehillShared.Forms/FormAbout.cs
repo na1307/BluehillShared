@@ -131,14 +131,11 @@ public sealed class FormAbout : Form {
         tableLayoutPanel.PerformLayout();
         ((ISupportInitialize)logoPictureBox).EndInit();
         ResumeLayout(false);
-
-        if (LicenseManager.UsageMode != LicenseUsageMode.Designtime) {
-            Text = $"{AssemblyTitle} 정보";
-            labelProductName.Text = AssemblyProduct;
-            labelVersion.Text = $"버전 {AssemblyInformationalVersion}";
-            labelCopyright.Text = AssemblyCopyright;
-            labelCompanyName.Text = AssemblyCompany;
-            textBoxDescription.Text = AssemblyDescription;
-        }
+        Text = $"{AssemblyTitle} 정보";
+        labelProductName.Text = AssemblyProduct;
+        labelVersion.Text = $"버전 {AssemblyInformationalVersion}";
+        labelCopyright.Text = AssemblyCopyright;
+        labelCompanyName.Text = AssemblyCompany;
+        textBoxDescription.Text = AssemblyDescription;
     }
 }
